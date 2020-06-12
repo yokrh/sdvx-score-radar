@@ -1,0 +1,35 @@
+{
+  "ja": {
+    "trackname": "楽曲名",
+    "ver": "バージョン",
+    "level": "レベル",
+    "difficulty": "難易度",
+    "btLong": "BTロング",
+    "douji": "同時押し",
+    "niju": "二重",
+    "tateren": "縦連",
+    "trill": "トリル"
+  },
+  "en": {
+    "trackname": "Name",
+    "ver": "Version",
+    "level": "Level",
+    "difficulty": "Difficulty",
+    "btLong": "BT Long",
+    "douji": "Simultaneous",
+    "niju": "Double",
+    "tateren": "Series",
+    "trill": "Trill"
+  },
+  "zh": {
+    "trackname": "名称",
+    "ver": "版本",
+    "level": "级",
+    "difficulty": "难度",
+    "btLong": "长BT",
+    "douji": "同时",
+    "niju": "双",
+    "tateren": "系列",
+    "trill": "颤音"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "ja": {
+    "title": "SDVX譜面レーダーチャート",
+    "description": "SDVX譜面レーダーチャートのトップページです。",
+    "text1-1": "このサイトは、コナミの音楽ゲーム",
+    "text1-2": "にある楽曲のレーダーチャートを確認できる非公式サイトです。",
+    "text2-1": "※ レーダーチャートの各パラメータは、各楽曲の譜面傾向から算出しています。",
+    "text3-1": "※ 視点移動が多い、ソフランや停止がある、または独自のギミックがある楽曲は、パラメータの質が大きく落ちる傾向があります。また、局所難は数値として表れにくいです。ご了承ください。",
+    "text4-1": "※ 基本的にSDVX Vの一部曲のみが対象です。参考程度にご利用ください。",
+    "track-list": "楽曲リストへ",
+    "last-updated": "最終更新"
+  },
+  "en": {
+    "title": "SDVX Music Score Radar Chart",
+    "description": "Here is top page of SDVX Music score Radar Chart.",
+    "text1-1": "This is unofficial website of a Konami's music game",
+    "text1-2": ", and it shows radar chart of music scores.",
+    "text2-1": "※ Each parameters of the radar chart was calculated from each music track tendency.",
+    "text3-1": "※ The tracks that have sof-lan (speed change), screen stop, whose viewpoint change a lot, or have special effect will may have unsuitable radar chart parameter. And, partial difficulties should be hard to appear as value. Thanks for your understanding.",
+    "text4-1": "※ Only some tracks in SDVX V are available. Please use as just reference.",
+    "track-list": "See track list",
+    "last-updated": "Last updated"
+  },
+  "zh": {
+    "title": "SDVX乐谱雷达图",
+    "description": "SDVX乐谱雷达图首页。",
+    "text1-1": "这网站是显示Konami的音乐游戏",
+    "text1-2": "里的乐谱的雷达图的非官方网站。",
+    "text2-1": "※ 雷达图的参量是从音乐曲目的倾向。",
+    "text3-1": "※ 有变速度，显示停止，有很多移动视点，或有特殊效果的音乐曲目能会出奇怪的参量。并且，局部难点很难作为数值出现。抱歉。",
+    "text4-1": "※ 只支持SDVX V里的有些音乐曲目。请仅作参考。",
+    "track-list": "看音乐曲目列表",
+    "last-updated": "最后更新"
+  }
+}
