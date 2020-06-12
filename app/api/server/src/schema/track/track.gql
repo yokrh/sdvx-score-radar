@@ -1,0 +1,75 @@
+"Connection"
+type TrackConnection implements Connection {
+  totalCount: Int
+  pageInfo: PageInfo
+  edges: [TrackEdge]
+}
+
+"Edge"
+type TrackEdge implements Edge {
+  cursor: String
+  node: Track!
+}
+
+"Node"
+type Track implements Node {
+  """
+  Track ID
+  """
+  id: ID!
+
+  """
+  Track name
+  """
+  name: String
+
+  """
+  Track url path in fumen site
+  """
+  path: String
+
+  """
+  Track url in youtube
+  """
+  youtube: String
+
+  """
+  Track released game ver
+  """
+  ver: String
+
+  """
+  Track level
+  """
+  level: String
+
+  """
+  Track difficulty
+  """
+  difficulty: String
+
+  """
+  Track status of bt_long
+  """
+  bt_long: Int
+
+  """
+  Track status of douji
+  """
+  douji: Int
+
+  """
+  Track status of niju
+  """
+  niju: Int
+
+  """
+  Track status of tateren
+  """
+  tateren: Int
+
+  """
+  Track status of trill
+  """
+  trill: Int
+}

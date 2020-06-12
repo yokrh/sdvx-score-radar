@@ -1,0 +1,6 @@
+scalar JSON
+scalar URL
+scalar Date
+scalar Long
+scalar Decimal
+scalar BigDecimal

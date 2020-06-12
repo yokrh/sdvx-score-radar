@@ -1,0 +1,15 @@
+extend type Query {
+  """
+  Track
+  """
+  track(id: ID!): Track
+
+  """
+  Track list
+  """
+  tracks(input: tracksInput, first: Int, offset: Int): TrackConnection
+}
+
+input tracksInput {
+  level: Int
+}

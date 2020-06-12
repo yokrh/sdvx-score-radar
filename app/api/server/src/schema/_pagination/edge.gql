@@ -1,0 +1,4 @@
+interface Edge {
+  cursor: String
+  node: Node!
+}
