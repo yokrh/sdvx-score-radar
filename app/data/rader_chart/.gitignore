@@ -1,0 +1,5 @@
+*.png
+!is_track_base_pic.png
+!is_track_base_pic2.png
+*.mp4
+*.mp4.part

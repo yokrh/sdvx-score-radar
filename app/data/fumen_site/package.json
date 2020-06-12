@@ -1,0 +1,14 @@
+{
+  "name": "fumen_site",
+  "version": "1.0.0",
+  "description": "* Node.js (> 8)",
+  "main": "fetch_fumen_site_track_data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "puppeteer": "^2.1.1"
+  }
+}
