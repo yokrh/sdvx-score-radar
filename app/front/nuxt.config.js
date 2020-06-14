@@ -88,10 +88,8 @@ export default {
     // tokenName: 'myApolloToken', // optional, default: apollo-token
     clientConfigs: {　// required
       default: {
-        httpEndpoint: 'http://localhost:4000/graphql',
-        httpLinkOptions: {
-          credentials: 'same-origin'
-        },
+        httpEndpoint: 'https://api-server-n62smewrva-an.a.run.app/graphql',  // prd. TODO: custom domain
+        // httpEndpoint: 'http://localhost:4000/graphql',  // dev
       },
     }
   },

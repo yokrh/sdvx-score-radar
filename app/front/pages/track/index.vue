@@ -213,7 +213,7 @@ export default {
     async initTracks() {
       this.tracks = await this.fetchTracks(this.selectedLevel)
         .catch(() => { this.tracks = [] })
-      this.selectedTrack = this.tracks.length > 0 ? this.tracks[0] : null
+      this.selectedTrack = this.tracks && this.tracks.length > 0 ? this.tracks[0] : null
     },
 
     /**
@@ -265,6 +265,7 @@ export default {
     async clearCache() {
       const CACHE_CLEAR_URL_PATH = '/cache-clear'
       await fetch(CACHE_CLEAR_URL_PATH, { method: 'POST' })
+      this.$message(this.$t('cache-clear-complete'))
     },
   },
 }

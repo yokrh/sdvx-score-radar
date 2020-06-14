@@ -199,15 +199,15 @@ class IndexedDB {
         const putReq = store.put(data)
 
         putReq.onsuccess = function(event) {
-          console.log('put data success')
+          console.log('db put data success')
         }
         transaction.oncomplete = function(event) {
-          console.log('transaction complete')
+          console.log('db transaction complete')
           db.close()
           resolve()
         }
         transaction.onerror = function(event) {
-          console.error('transaction error')
+          console.error('db transaction error')
           db.close()
           resolve()
         }
@@ -243,19 +243,19 @@ class IndexedDB {
         const getReq = objectStore.get(key);
 
         getReq.onsuccess = function(event) {
-          console.log('get data success')
+          console.log('db get data success')
           db.close()
           resolve(event.target.result)
         }
         getReq.onerror = function(event) {
-          console.error('get data error')
+          console.error('db get data error')
           db.close()
           reject()
         }
       }
 
       dbReq.onerror = function(event) {
-        console.error('get data error')
+        console.error('db get data error')
         const db = event.target.result
         db.close()
         reject()

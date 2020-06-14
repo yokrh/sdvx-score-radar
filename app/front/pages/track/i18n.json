@@ -4,20 +4,23 @@
     "description": "SDVX譜面レーダーチャートの楽曲リストページです。",
     "fumen-site": "譜面サイトへ",
     "word-search-placeholder": "楽曲名で検索",
-    "cache-clear": "キャッシュクリア"
+    "cache-clear": "キャッシュクリア",
+    "cache-clear-complete": "キャッシュクリア完了"
   },
   "en": {
     "title": "SDVX Music Score Radar Chart - Track list",
     "description": "Track list page of SDVX Music Score Radar Chart.",
     "fumen-site": "See music score website",
     "word-search-placeholder": "Search by track name",
-    "cache-clear": "Clear cache"
+    "cache-clear": "Clear cache",
+    "cache-clear-complete": "Clear cache complete"
   },
   "zh": {
     "title": "SDVX乐谱雷达图 - 音乐列表",
     "description": "SDVX乐谱雷达图的音乐列表页面。",
     "fumen-site": "看乐谱网站",
     "word-search-placeholder": "按歌曲名称搜索",
-    "cache-clear": "清除缓存"
+    "cache-clear": "清除缓存",
+    "cache-clear-complete": "清除缓存完成"
   }
 }

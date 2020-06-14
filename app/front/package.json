@@ -5,6 +5,7 @@
   "author": "yokrh",
   "private": true,
   "scripts": {
+    "dev2": "nuxt --port=3333",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
