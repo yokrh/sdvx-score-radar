@@ -5,9 +5,7 @@ const DEFAULT_DEST_DIR = process.env.TMP_DIR
 // Imports the Google Cloud client library
 const { Storage } = require('@google-cloud/storage')
 // Creates a client from a Google service account key.
-const keyFile = process.env.ENV_DEV
-  ? process.env.SA_DATA_CREDENTIALS_PATH_DEV
-  : process.env.SA_DATA_CREDENTIALS_PATH_PRD
+const keyFile = process.env.SA_DATA_CREDENTIALS_PATH
 const storage = new Storage({ keyFilename: keyFile })
 
 /**
@@ -29,10 +27,10 @@ class GCS {
     }
 
     const options = { destination: destFilename }
+    console.log('download:', srcFilename)
     await storage.bucket(bucketName).file(srcFilename).download(options)
       .catch((err) => {
-        console.error('downloadFile error:', srcFilename)
-        console.error(err)
+        console.error('downloadFile error:', srcFilename, err)
         throw new Error('downloadFile error')
       })
 

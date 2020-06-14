@@ -34,14 +34,15 @@ class TrackConnector {
     // Fumensite track list
     const trackListFileObjPath = `${TRACK_LIST_BUCKET_FOLDER_NAME}/${level}.json`
     const trackListFilePath = await GCS.downloadFile(DATA_BUCKET_NAME, trackListFileObjPath)
-      .catch(() => { return [] })
+      .catch(() => [])
     const trackList = Object.values(LocalFileUtil.readJson(trackListFilePath))
 
     // Scorerader tracks
     const trackFileObjPaths = await GCS.getFileObjPathsbyFolder(DATA_BUCKET_NAME, TRACK_BUCKET_FOLDER_NAME)
-      .catch(() => { return [] })
+      .then(paths => paths.filter(path => path.includes(`/${level}_`)))
+      .catch(() => [])
     const trackFilePaths = await GCS.downloadFiles(DATA_BUCKET_NAME, trackFileObjPaths)
-      .catch(() => { return [] })
+      .catch(() => [])
     const tracks = trackFilePaths.map(path => LocalFileUtil.readJson(path))
 
     return TrackDataUtil.getMergedTrackData(tracks, trackList)
@@ -110,5 +111,5 @@ class LocalTrackConnector extends TrackConnector {
   }
 }
 
-const connector = process.env.IS_USE_LOCAL_TRACK_DATA === 'true' ? LocalTrackConnector : TrackConnector
+const connector = process.env.ENV === process.env.ENV_DEV ? LocalTrackConnector : TrackConnector
 module.exports = connector
