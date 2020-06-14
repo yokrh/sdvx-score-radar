@@ -1,8 +1,10 @@
 # Api server
 
-An api server for sdvx core rader app.
+A backend api server for sdvx score rader app.
+
 
 ## Usage
+
 ```sh
 # install dependent modules
 npm install
@@ -10,3 +12,6 @@ npm install
 # start graphql server
 npm run dev
 ```
+
+May check at http://localhost:4000.
+Sample query is in doc/ directory.

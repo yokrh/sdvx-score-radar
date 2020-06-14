@@ -1,5 +1,6 @@
-# GCP memo
+# Infrastructure memo
 
+GCP Project
 https://console.cloud.google.com/home/dashboard?hl=ja&project=sdvx-score-rader
 
 
@@ -23,8 +24,8 @@ https://console.cloud.google.com/home/dashboard?hl=ja&project=sdvx-score-rader
 
     * IAM
 
-    https://console.developers.google.com/apis/api/iam.googleapis.com/overview?project=sdvx-score-rader
+        https://console.developers.google.com/apis/api/iam.googleapis.com/overview?project=sdvx-score-rader
 
     * Resources
 
-    https://console.developers.google.com/apis/library/cloudresourcemanager.googleapis.com?project=sdvx-score-rader
+        https://console.developers.google.com/apis/library/cloudresourcemanager.googleapis.com?project=sdvx-score-rader
