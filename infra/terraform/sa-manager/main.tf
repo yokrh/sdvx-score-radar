@@ -50,10 +50,15 @@ resource "google_service_account_key" "sa_api_key" {
 }
 resource "google_project_iam_member" "sa_api_storage" {
   project = var.project
-  role = "roles/storage.objectViewer" # TODO: bucket指定はなさそう。bucket側からSAの制限かけるかんじかな（https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control.html）
+  role = "roles/storage.objectViewer" # Storage全体のみで、bucket指定はなさそう。十分ではあるので一旦これで。bucket側からSAの制限かけるかんじかな（https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control.html）
   member = "serviceAccount:${google_service_account.sa_api.email}"
 }
-resource "google_project_iam_member" "project" {
+resource "google_project_iam_member" "sa_api_cloud_run_service" {
+  project = var.project
+  role = "roles/serverless.serviceAgent"
+  member = "serviceAccount:${google_service_account.sa_api.email}"
+}
+resource "google_project_iam_member" "sa_api_cloud_run" {
   project = var.project
   role = "roles/run.admin"
   member = "serviceAccount:${google_service_account.sa_api.email}"
