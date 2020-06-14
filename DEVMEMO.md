@@ -22,6 +22,10 @@
 
         frontもcustom domain
 
+3. data update自動化
+
+    Cloud Runに乗っけてクーロンできたら毎週とかしてもいいかも。
+    frontにある最終更新日、notificationとかも考慮していいかも。
 
 
 ## Idea
@@ -44,6 +48,12 @@ https://qiita.com/YutaSaito1991/items/ec0c089d354ec9b8a7e0
 
 
 ## Knowhow
+
+### GCP Cloud armor
+
+IP制限やDDoS対策をしてくれるらしい。趣味プロにはちょっと高い
+https://cloud.google.com/armor/
+
 
 ### Tensorflow model saving format
 
