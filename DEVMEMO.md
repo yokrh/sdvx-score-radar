@@ -4,17 +4,24 @@
 
 1. apiをcloud runに
 
-    1. image作成
+    1. domain買う
 
-        Dockerfile修正してイメージup
+        https://domains.google.com/m/registrar/
 
-    2. terraform
+    2. tfでcloud runに、custom domain
 
-        https://github.com/yokrh/cloud-run-training/blob/beff545b0e0d31ebea736a695024d2db7522149d/infra/tf/main.tf
+        https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html
+
+    3. frontのconfigのapi部分も変更忘れずに
 
 2. frontをnetlifyに
 
     使ったことないので使ってみる
+
+    1. deploy
+
+        frontもcustom domain
+
 
 
 ## Idea
