@@ -1,6 +1,23 @@
 # sdvx-score-rader-app
 
-> My pioneering Nuxt.js project
+## Production
+
+* Netlify
+
+    https://app.netlify.com/teams/yokrh/sites
+
+
+## Static resource
+
+* Figma
+
+    https://www.figma.com/file/9Q0e75bxjqTYcFTVT97F0L/Logo?node-id=5%3A7
+
+* Favicon generator
+
+    https://ao-system.net/favicongenerator/
+
+
 
 ## Build Setup
 

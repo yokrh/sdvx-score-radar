@@ -151,13 +151,13 @@ export default {
         },
         /**
          * SW Cache API doesn't support POST method...
-         * 
+         *
          * Ref:
          * https://medium.com/@jono/cache-graphql-post-requests-with-service-worker-100a822a388a
          * https://stackoverflow.com/questions/35270702/can-service-workers-cache-post-requests
          * https://stackoverflow.com/questions/33045517/use-serviceworker-cache-only-when-offline
          * https://github.com/nuxt-community/pwa-module/blob/dev/lib/workbox/options.js
-         * 
+         *
          * Selected solution:
          * Integrate custom sw.js with POST handler containing indexedDB process
          */
@@ -174,6 +174,17 @@ export default {
         //   },
         // },
       ],
-    }    
-  }
+    },
+  },
+
+  /**
+   * Nuxt gererate configuration.
+   */
+  generate: {
+    exclude: [
+      /^(?=.*\bLevel\b).*$/,
+      /^(?=.*\bTrackData\b).*$/,
+      /^(?=.*\bgql\b).*$/,
+    ],
+  },
 }
