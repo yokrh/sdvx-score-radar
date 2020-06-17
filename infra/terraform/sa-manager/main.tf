@@ -5,6 +5,8 @@ variable "sa_data_name" {}
 variable "sa_data_json_file" {}
 variable "sa_api_name" {}
 variable "sa_api_json_file" {}
+variable "sa_domain_name" {}
+variable "sa_domain_json_file" {}
 
 
 # Provider
@@ -64,10 +66,34 @@ resource "google_project_iam_member" "sa_api_cloud_run" {
   member = "serviceAccount:${google_service_account.sa_api.email}"
 }
 
+# Service account of domain
+resource "google_service_account" "sa_domain" {
+  account_id = var.sa_domain_name
+  display_name = "Service account ${var.sa_domain_name}"
+  description = "${var.project} SA"
+}
+resource "google_service_account_key" "sa_domain_key" {
+  service_account_id = google_service_account.sa_domain.email
+
+  # output account credentials
+  provisioner "local-exec" {
+    command = "echo ${google_service_account_key.sa_domain_key.private_key} | base64 -D > ${var.sa_domain_json_file}"
+  }
+}
+resource "google_project_iam_member" "sa_domain_dns" {
+  project = var.project
+  role = "roles/dns.admin"
+  member = "serviceAccount:${google_service_account.sa_domain.email}"
+}
+
+
 # Output
 output "sa_data__name" {
   value = google_service_account.sa_data.name
 }
 output "sa_api__name" {
   value = google_service_account.sa_api.name
+}
+output "sa_domain__name" {
+  value = google_service_account.sa_domain.name
 }

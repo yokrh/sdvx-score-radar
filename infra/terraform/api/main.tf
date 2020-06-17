@@ -4,6 +4,7 @@ variable "region" {}
 variable "container_image" {}
 variable "cloudrun_name" {}
 variable "container_port" {}
+variable "domain_name" {}
 
 # Provider
 provider "google" {
@@ -12,6 +13,7 @@ provider "google" {
   region = var.region
 }
 
+# Cloud Run
 resource "google_cloud_run_service" "default" {
   name     = var.cloudrun_name
   location = var.region
@@ -51,7 +53,20 @@ resource "google_cloud_run_service_iam_policy" "noauth" {
 
   policy_data = data.google_iam_policy.noauth.policy_data
 }
+# resource "google_cloud_run_domain_mapping" "default" {
+#   location = var.region
+#   name = var.domain_name
 
+#   metadata {
+#     namespace = var.project
+#   }
+
+#   spec {
+#     route_name = google_cloud_run_service.default.name
+#   }
+# }
+
+# Output
 output "cloud_run__id" {
   value = google_cloud_run_service.default.id
 }
@@ -61,3 +76,6 @@ output "cloud_run__name" {
 output "cloud_run__status" {
   value = google_cloud_run_service.default.status
 }
+# output "cloud_run_domain_mapping__name" {
+#   value = google_cloud_run_domain_mapping.default.name
+# }
