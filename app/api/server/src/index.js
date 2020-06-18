@@ -20,6 +20,7 @@ server.applyMiddleware({
     origin: [  // Apollo server's default is '*', which is based on express cors's default (https://github.com/expressjs/cors)
       process.env.FRONTEND_APP_DOMAIN_DEV,
       process.env.FRONTEND_APP_DOMAIN_PRD,
+      process.env.FRONTEND_APP_DOMAIN_NETLIFY,
     ]
   },
 })
