@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 
+# Change env configuration
+cp .env envbackup
+sed 's/ENV=development/ENV=production/g' envbackup > .env
 # Prepare GCP SA Credentials
 sh ./copy_sa_credentials.sh
 # Build a container image and push it to GCP Container Registory
 gcloud builds submit --config=./cloud-build.yml
+cp envbackup .env
+rm envbackup
 
 
 #---------------------------------------------#
