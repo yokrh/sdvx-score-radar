@@ -17,6 +17,7 @@ provider "google" {
 resource "google_cloud_run_service" "default" {
   name     = var.cloudrun_name
   location = var.region
+  autogenerate_revision_name = true
 
   metadata {
     namespace = var.project
