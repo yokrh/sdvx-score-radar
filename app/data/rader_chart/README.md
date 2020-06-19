@@ -40,3 +40,21 @@ A script which create chart data from game videos.
     cd bin/
     sh main.sh
     ```
+
+
+## Knowhow
+
+### Tensorflow model saving format
+
+* .h5
+
+    Used by Keras.
+    https://www.tensorflow.org/guide/keras/save_and_serialize#whole-model_saving
+
+* .hdf5 (or .h5):
+
+    Used by Tensorflow.
+    A common format (https://support.hdfgroup.org/products/java/release/download.html)
+    directory containing assets and variables
+
+Both seem OK.
