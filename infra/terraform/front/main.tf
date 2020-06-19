@@ -1,34 +1,48 @@
-variable "credentials" {}
-variable "project" {}
+variable "accesskey_id" {}
+variable "accesskey_secret" {}
 variable "region" {}
+variable "dns_zone_id" {}
+variable "domain_name" {}
+variable "cname_value" {}
 
-
-# Provider
-provider "google" {
-  credentials = "${file(var.credentials)}"
-  project = var.project
+provider "aws" {
+  access_key = var.accesskey_id
+  secret_key = var.accesskey_secret
   region = var.region
 }
 
-# Storage
-# resource "google_storage_bucket" "front" {
-#   name = "image-store.com"
-#   location = "EU"
+resource "aws_route53_record" "default" {
+  zone_id = var.dns_zone_id
+  name = var.domain_name
+  type = "CNAME"
+  ttl = "300"
+  records = [var.cname_value]
+}
 
-#   force_destroy = true
-#   bucket_policy_only = true
+output route53_record__domain_name {
+  value = aws_route53_record.default.name
+}
 
-#   website {
-#     main_page_suffix = "index.html"
-#     not_found_page   = "404.html"
-#   }
-#   cors {
-#     origin          = ["http://image-store.com"]
-#     method          = ["GET", "HEAD", "PUT", "POST", "DELETE"]
-#     response_header = ["*"]
-#     max_age_seconds = 3600
-#   }
+
+### Deprecated because GCP Cloud DNS doesn't work with the .app domain purchased from Google Domains...
+# variable "credentials" {}
+# variable "project" {}
+# variable "region" {}
+# variable "domain_name" {}
+# variable "dns_zone" {}
+#
+# # Provider
+# provider "google" {
+#   credentials = "${file(var.credentials)}"
+#   project = var.project
+#   region = var.region
 # }
-# output "cloud_storage_name__front" {
-#   value = google_storage_bucket.front.name
+# # Cloud DNS zone
+# resource "google_dns_managed_zone" "default" {
+#   name = var.dns_zone
+#   dns_name = "${var.domain_name}."
+# }
+# # Output
+# output "dns_zone__name" {
+#   value = google_dns_managed_zone.default.name
 # }
