@@ -3,8 +3,8 @@ variable "project" {}
 variable "region" {}
 variable "container_image" {}
 variable "cloudrun_name" {}
-variable "container_port" {}
-variable "domain_name" {}
+# variable "container_port" {}
+# variable "domain_name" {}
 
 # Provider
 provider "google" {
