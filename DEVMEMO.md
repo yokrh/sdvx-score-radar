@@ -5,6 +5,42 @@
 
 ## Idea
 
+### NetlifyのIaC
+
+* Terraform
+
+    https://www.terraform.io/docs/providers/netlify/index.html
+
+base_urlまわりがうまくいかない。サンプルもなくて分からん。やめた。
+
+```sh
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # netlify_site.main will be created
+  + resource "netlify_site" "main" {
+    ...
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+netlify_site.main: Creating...
+
+Error: Post https:///app/front/sites: http: no Host in request URL
+
+  on main.tf line 17, in resource "netlify_site" "main":
+  17: resource "netlify_site" "main" {
+```
+
 ### data update自動化
 
 Cloud Runに乗っけてクーロンできたら毎週とかしてもいいかも。
