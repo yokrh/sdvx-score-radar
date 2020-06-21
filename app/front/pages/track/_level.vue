@@ -10,7 +10,7 @@
         </nuxt-link>
       </div>
       <div class="item">
-        <nuxt-link :to="localePath({ name: 'track-level' })">
+        <nuxt-link :to="localePath({ path: '/track/' })">
           Track
         </nuxt-link>
       </div>
