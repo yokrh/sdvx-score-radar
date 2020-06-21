@@ -11,6 +11,5 @@ A script which crawls fumen site to get track data.
 ## Usage
 
 ```sh
-mkdir -p data/
-node fetch_fumen_site_track_data.js
+sh main.sh
 ```
