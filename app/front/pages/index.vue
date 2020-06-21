@@ -9,7 +9,7 @@
 
     <!-- サンプル画像 -->
     <div class="sample-image-container">
-      <img class="sample-image" src="../assets/img/rader_chart_sample.png" alt="Rader chart sample image">
+      <img class="sample-image" src="../assets/img/rader_chart_sample.png" alt="Rader chart image">
     </div>
 
     <!-- 楽曲リストへのリンク -->

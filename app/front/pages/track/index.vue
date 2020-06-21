@@ -294,14 +294,19 @@ export default {
   position: absolute;
   top: 20px;
   right: 20px;
+  padding: 0 0 8px 8px;
 }
 .level-list {
   display: flex;
   flex-wrap: wrap;
   margin: 36px 0;
 }
-.level {
-  margin-right: 16px;
+.level.el-radio {
+  margin-right: 0;
+  margin-bottom: 8px;
+}
+.level:nth-last-child(n+2) {
+  margin-right: 20px;
 }
 .level >>> .el-radio__input {
   display: none;
