@@ -16,7 +16,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      // { hid: 'description', name: 'description', content: process.env.npm_package_description || 'コナミの音楽ゲームSound Voltexの楽曲のレーダーチャートが見られる非公式サイトです。' }
+      { hid: 'og:site_name', property: 'og:site_name', content: 'SDVX譜面レーダーチャート' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://score.sdvx.yokrh.com' },
+      { hid: 'og:title', property: 'og:title', content: 'SDVX譜面レーダーチャート' },
+      { hid: 'og:description', property: 'og:description', content: 'このサイトは、コナミの音楽ゲームSOUND VOLTEXにある楽曲のレーダーチャートを確認できる非公式サイトです。' },
+      { hid: 'og:image', property: 'og:image', content: 'https://storage.cloud.google.com/sdvx-score-rader-img/icon.png' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
