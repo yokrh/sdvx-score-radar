@@ -14,7 +14,7 @@
 
     <!-- 楽曲リストへのリンク -->
     <div class="main-action">
-      <nuxt-link :to="localePath('track')">
+      <nuxt-link :to="localePath({ name: 'track-level' })">
         <el-button type="primary" plain>
           {{ $t('track-list') }}
         </el-button>

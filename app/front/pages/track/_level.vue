@@ -10,9 +10,15 @@
         </nuxt-link>
       </div>
       <div class="item">
-        <nuxt-link :to="localePath('track')">
+        <nuxt-link :to="localePath({ name: 'track-level' })">
           Track
         </nuxt-link>
+      </div>
+      <div
+        v-if="selectedLevel"
+        class="item"
+      >
+        {{ selectedLevel }}
       </div>
     </div>
 
@@ -162,7 +168,7 @@ export default {
 
     // 構造化データ
     structuredData() {
-      return {
+      const res = {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
@@ -184,10 +190,37 @@ export default {
           },
         ],
       }
+      if (this.selectedLevel) {
+        res.itemListElement.push({
+          '@type': 'ListItem',
+          'position': 3,
+          'item': {
+            '@id': `${process.env.baseUrl}/track/${this.selectedLevel}`,
+            'name': 'Level',
+          },
+        })
+      }
+      return res
     },
+  },
+  validate ({ params }) {
+    if (params.level) {
+      if (!/^\d+$/.test(params.level)) {
+        return false
+      }
+      if (isNaN(parseInt(params.level, 10)) && !isFinite(params.level)) {
+        return false
+      }
+    }
+
+    return true
   },
   mounted() {
     this.apollo = new Apollo(this)
+
+    if (this.$route.params.level) {
+      this.selectedLevel = parseInt(this.$route.params.level, 10)
+    }
     this.initTracks()
   },
   methods: {
@@ -205,6 +238,7 @@ export default {
     onSelectLevel(level) {
       this.selectedLevel = level
       this.initTracks()
+      this.$router.push(this.localePath({ name: 'track-level', params: { level } }))
     },
 
     /**
