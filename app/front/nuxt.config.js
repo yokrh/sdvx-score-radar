@@ -1,4 +1,3 @@
-
 export default {
   mode: 'universal',
 
@@ -186,5 +185,12 @@ export default {
       /^(?=.*\bTrackData\b).*$/,
       /^(?=.*\bgql\b).*$/,
     ],
+    routes() {
+      return new Promise((resolve) => resolve()) // assuming request dynamic params list
+        .then(() => {
+          const levels = require('./pages/track/Level').default
+          return levels.map(level => `/track/${level}`).concat(['/track'])
+        })
+    }
   },
 }
