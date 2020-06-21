@@ -3,6 +3,13 @@
 A backend api server for sdvx score rader app.
 
 
+## Production
+
+* GCP Cloud Run
+
+    https://console.cloud.google.com/run?hl=ja&project=sdvx-score-rader
+
+
 ## Deploy
 
 ```sh
