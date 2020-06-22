@@ -3,6 +3,11 @@
 開発用メモ。
 
 
+## Search console
+
+https://search.google.com/search-console?resource_id=https%3A%2F%2Fscore.sdvx.yokrh.com%2F
+
+
 ## Idea
 
 ### NetlifyのIaC
