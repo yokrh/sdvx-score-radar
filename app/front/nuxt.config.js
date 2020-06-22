@@ -16,6 +16,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'google-site-verification', content: 'oPNERFXMF-SrsLec2HNaJAv8Um4NesPcl-iVSrQy6k4' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'SDVX譜面レーダーチャート' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'https://score.sdvx.yokrh.com' },
