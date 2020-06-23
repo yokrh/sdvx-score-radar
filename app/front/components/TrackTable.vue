@@ -197,6 +197,9 @@ export default {
 .track-table {
   margin-top: 12px;
 }
+.track-table >>> .el-table thead {
+  color: #555;
+}
 .track-table >>> .el-table__row {
   cursor: pointer;
 }

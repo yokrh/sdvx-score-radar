@@ -138,8 +138,8 @@ export default {
       // swURL: 'custom-sw.js',
       importScripts: ['custom-sw.js'],
 
-      offline: false, // disable default cache rules
-      dev: true, // enable sw in local dev
+      // enable sw in local dev
+      // dev: true,
 
       // Define runtime caching rules.
       runtimeCaching: [

@@ -30,7 +30,7 @@
           :underline="false"
           href="https://p.eagate.573.jp/game/sdvx/v/p/top/"
           target="_blank"
-          noopener
+          rel="noopener"
           style="padding:0 1px;"
         >
           SOUND VOLTEX
@@ -106,6 +106,9 @@ export default {
 }
 .main-action >>> .el-button {
   width: 50%;
+}
+.main-action >>> .el-button--primary.is-plain {
+  color: #1060ff;
 }
 .page-description {
   padding: 40px 0 0 20%;

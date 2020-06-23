@@ -23,19 +23,17 @@
     </div>
 
     <!-- 設定 -->
-    <el-dropdown
+    <el-popover
       class="settings"
+      placement="bottom"
       trigger="click"
     >
-      <i class="el-icon-s-tools" />
-      <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item icon="el-icon-delete">
-          <span @click="clearCache">
-            {{ $t('cache-clear') }}
-          </span>
-        </el-dropdown-item>
-      </el-dropdown-menu>
-    </el-dropdown>
+      <span @click="clearCache">
+        <i class="el-icon-delete" style="padding-right:12px;" />
+        {{ $t('cache-clear') }}
+      </span>
+      <i class="el-icon-s-tools" slot="reference" />
+    </el-popover>
 
     <!-- レベル選択 -->
     <el-radio-group
@@ -68,12 +66,13 @@
     >
       <div class="track-table-container">
         <!-- ワード絞り込み -->
-        <el-input
+        <input
           class="word-search"
           v-model="searchName"
           :placeholder="$t('word-search-placeholder')"
           clearable
-        />
+          :aria-label="$t('word-search-placeholder')"
+        >
 
         <!-- 楽曲リストのテーブル -->
         <TrackTable
@@ -100,7 +99,7 @@
           class="go-to-fumen-site"
           :href="`https://www.sdvx.in${selectedTrack.path}.htm`"
           target="_blank"
-          noopener
+          rel="noopener"
         >
           {{ $t('fumen-site') }}
         </el-link>
@@ -306,6 +305,11 @@ export default {
 </script>
 
 <style scoped>
+.track-page >>> .el-link.el-link--primary,
+.track-page >>> .el-radio__input.is-checked+.el-radio__label,
+.track-page >>>.el-checkbox__input.is-checked+.el-checkbox__label {
+  color: #1060ff;
+}
 .track-page {
   padding: 0 4% 28px 4%; /* be careful of footer */
   width: 92%;
@@ -329,6 +333,7 @@ export default {
   top: 20px;
   right: 20px;
   padding: 0 0 8px 8px;
+  cursor: pointer;
 }
 .level-list {
   display: flex;
@@ -360,6 +365,19 @@ export default {
 .word-search {
   margin-top: 12px;
   width: 60%;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #DCDFE6;
+  font-size: inherit;
+  color: #606266;
+  padding: 0 15px;
+}
+.word-search::placeholder {
+  font-size: 14px;
+  color: #c0c4cc;
 }
 .track-table-container {
   padding-right: 5%;
