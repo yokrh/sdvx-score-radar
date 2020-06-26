@@ -1,23 +1,26 @@
 {
   "ja": {
-    "title": "SDVX譜面レーダーチャート - 楽曲リスト",
-    "description": "SDVX譜面レーダーチャートの楽曲リストページです。",
+    "title": "SDVX譜面レーダーチャート - 楽曲リスト {level}",
+    "description": "SDVX譜面レーダーチャートの楽曲リストページです。譜面傾向が確認できます。{level}",
+    "level": "レベル{level}",
     "fumen-site": "譜面サイトへ",
     "word-search-placeholder": "楽曲名で検索",
     "cache-clear": "キャッシュクリア",
     "cache-clear-complete": "キャッシュクリア完了"
   },
   "en": {
-    "title": "SDVX Music Score Radar Chart - Track list",
-    "description": "Track list page of SDVX Music Score Radar Chart.",
+    "title": "SDVX Music Score Radar Chart - Track list {level}",
+    "description": "Track list page of SDVX Music Score Radar Chart. You can check the musical score tendency. {level}",
+    "level": "level {level}",
     "fumen-site": "See music score website",
     "word-search-placeholder": "Search by track name",
     "cache-clear": "Clear cache",
     "cache-clear-complete": "Clear cache complete"
   },
   "zh": {
-    "title": "SDVX乐谱雷达图 - 音乐列表",
-    "description": "SDVX乐谱雷达图的音乐列表页面。",
+    "title": "SDVX乐谱雷达图 - 音乐列表 {level}",
+    "description": "SDVX乐谱雷达图的音乐列表页面。您可以检查乐谱趋势。{level}",
+    "level": "{level}级",
     "fumen-site": "看乐谱网站",
     "word-search-placeholder": "按歌曲名称搜索",
     "cache-clear": "清除缓存",

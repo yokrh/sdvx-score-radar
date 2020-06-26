@@ -124,10 +124,14 @@ export default {
   head() {
     return {
       // Title
-      title: this.$t('title'),
+      title: this.$t('title', { level: `${this.$t('level', { level: parseInt(this.selectedLevel, 10) })}` }),
       // Description
       meta: [
-        { hid: 'description', name: 'description', content: this.$t('description') },
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('description', { level: `${this.$t('level', { level: parseInt(this.selectedLevel, 10) })}` }),
+        },
       ],
       // Structured data
       __dangerouslyDisableSanitizers: ['script'],
@@ -164,7 +168,6 @@ export default {
       }
       return this.tracks.filter(t => t.name.includes(this.searchName))
     },
-
     // 構造化データ
     structuredData() {
       const res = {
