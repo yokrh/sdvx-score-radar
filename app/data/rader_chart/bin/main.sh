@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 python -V
 
-org_shell_dir='../../fumen_site/data/'
+org_shell_dir='../../fumen_site/output/'
 tmp_shell_dir='tmp/'
 mkdir -p ${tmp_shell_dir}
 

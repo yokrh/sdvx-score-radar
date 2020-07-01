@@ -32,7 +32,7 @@ track_name : string
   For example, 'hogehoge_nya'.
 """
 
-is_production = False
+is_production = True
 
 is_enabled_additional_concated_images = is_production
 
