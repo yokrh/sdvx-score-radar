@@ -110,6 +110,10 @@ export default {
 .main-action >>> .el-button--primary.is-plain {
   color: #1060ff;
 }
+.main-action >>> .el-button--primary.is-plain:hover {
+  color: #fff;
+  font-weight: bold;
+}
 .page-description {
   padding: 40px 0 0 20%;
   width: 60%;

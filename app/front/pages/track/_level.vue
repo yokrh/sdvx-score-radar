@@ -27,8 +27,9 @@
       class="settings"
       placement="bottom"
       trigger="click"
+      v-model="isSettingVisible"
     >
-      <span @click="clearCache">
+      <span class="setting" @click="clearCache">
         <i class="el-icon-delete" style="padding-right:12px;" />
         {{ $t('cache-clear') }}
       </span>
@@ -147,6 +148,9 @@ export default {
       apollo: null,
       // ローディング中か
       isLoading: false,
+
+      // 設定ポップアップ表示中か
+      isSettingVisible: false,
 
       // 選択できる楽曲レベル
       LEVEL,
@@ -302,6 +306,7 @@ export default {
       const CACHE_CLEAR_URL_PATH = '/cache-clear'
       await fetch(CACHE_CLEAR_URL_PATH, { method: 'POST' })
       this.$message(this.$t('cache-clear-complete'))
+      this.isSettingVisible = false
     },
   },
 }
@@ -336,6 +341,9 @@ export default {
   top: 20px;
   right: 20px;
   padding: 0 0 8px 8px;
+  cursor: pointer;
+}
+.setting {
   cursor: pointer;
 }
 .level-list {
