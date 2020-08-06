@@ -27,3 +27,14 @@ The data for sdvx score rader app.
 ```sh
 sh up_to_gcp_storage.sh
 ```
+
+### Trouble shooting
+
+```sh
+# Check config
+gcloud config list
+# Login if not
+gcloud auth login
+# Check gsutil works
+gsutil ls
+```
