@@ -13,12 +13,12 @@ GCP_TRACK_LIST_FILES_DIR='data/track_list/'
 
 echo '--- upload begin ---'
 
-command="gsutil cp -m ${TRACK_FILES} gs://${GCP_BUCKET_NAME}/${GCP_TRACK_FILES_DIR}"
+command="gsutil -m cp ${TRACK_FILES} gs://${GCP_BUCKET_NAME}/${GCP_TRACK_FILES_DIR}"
 echo "${command}"
 `${command}`
 echo 'done'
 
-command="gsutil cp -m ${TRACK_LIST_FILES} gs://${GCP_BUCKET_NAME}/${GCP_TRACK_LIST_FILES_DIR}"
+command="gsutil -m cp ${TRACK_LIST_FILES} gs://${GCP_BUCKET_NAME}/${GCP_TRACK_LIST_FILES_DIR}"
 echo "${command}"
 `${command}`
 echo 'done'
