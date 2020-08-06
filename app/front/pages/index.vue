@@ -70,7 +70,7 @@ export default {
   data() {
     return {
       // 最終更新日
-      lastUpdated: '2020/7/1',
+      lastUpdated: '2020/8/6',
     }
   },
 }
