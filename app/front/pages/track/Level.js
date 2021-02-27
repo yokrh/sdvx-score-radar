@@ -7,7 +7,7 @@ const LEVEL = [
   17,
   18,
   19,
-  // 20,
+  20,
 ]
 
 export default LEVEL
