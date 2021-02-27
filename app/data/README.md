@@ -9,6 +9,21 @@ The data for sdvx score rader app.
     https://console.cloud.google.com/storage/browser?hl=ja&project=sdvx-score-rader
 
 
+## Update prod data
+
+1. Update fumen site track data
+
+    See fumen_site/README.md
+
+2. Update rader chat data
+
+    See rader_chart/README.md
+
+3. Upload the data
+
+    See below
+
+
 ## Data upload to GCP Storage
 
 アップロード仕方めも

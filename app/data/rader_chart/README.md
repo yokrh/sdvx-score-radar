@@ -44,6 +44,14 @@ A script which create chart data from game videos.
 
 ## Knowhow
 
+### Youtube DL update
+
+Sometimes necessary.
+
+```sh
+youtube-dl --update
+```
+
 ### Tensorflow model saving format
 
 * .h5
