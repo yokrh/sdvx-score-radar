@@ -4,6 +4,8 @@
 
 縦連とトリルと二重とロングがうまくなりたい。
 
+https://score.sdvx.yokrh.com/
+
 
 ## Thanks
 
