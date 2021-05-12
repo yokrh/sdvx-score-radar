@@ -19,7 +19,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^3.0.0-0",
     "animate.css": "^3.7.2",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "element-ui": "^2.4.11",
     "graphql-tag": "^2.10.3",
     "nuxt": "^2.0.0",
