@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+python all.py https://www.youtube.com/watch?v=ughA4pTc328 5 15 EXH "Barbless_Ego"
+python all.py https://www.youtube.com/watch?v=RZdHsJP7wi4 5 15 EXH "Boss_Rush"
+python all.py https://www.youtube.com/watch?v=QfaVRcWt1RI 5 15 EXH "ECHIDNA"
+python all.py https://www.youtube.com/watch?v=Rwj6brFa8WQ 5 15 EXH "ΗУМЛ"
+python all.py https://www.youtube.com/watch?v=gmwsKXJKTUE 5 15 EXH "RHYZING_BEAT"
+python all.py https://www.youtube.com/watch?v=AdziB4udXM0 5 15 EXH "Touch_My_Body"
+python all.py https://www.youtube.com/watch?v=VYkJ9IwHrv4 5 15 EXH "びいすと！"
+python all.py https://www.youtube.com/watch?v=ZayCHfVU-_I 5 15 EXH "恋歌疾風！かるたクイーンいろは"
+python all.py https://www.youtube.com/watch?v=Q1Gr-Elf3v0 5 15 EXH "片翼のディザイア"
+python all.py https://www.youtube.com/watch?v=1GygSH6Po9U 5 15 EXH "ヒミツダイヤル"
+python all.py https://www.youtube.com/watch?v=lUKmwMJHh60 5 15 EXH "恋はどう？モロ◎波動OK☆方程式!!"
